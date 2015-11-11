@@ -1,0 +1,5 @@
+My project is about sleep deprivation and the consequences thereof.
+Currently i have data about reaction speed in relation to sleep deprivation but i want to gradually gather more data.
+I'd like to make a User Interface that allows the User to easily use a Menu to choose what data they want to view.
+The data will then be displayed to the User in a "unique" way.
+My aim is to give the User as much information about a specific consequence as possible which will require reading in more csv files.
