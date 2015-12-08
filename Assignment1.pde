@@ -187,6 +187,7 @@ void draw()
   {
     case 1:
     {
+      textAlign(LEFT);
       background(0);
       stroke(250);
       line(0, 350, 1000, 350);
