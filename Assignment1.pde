@@ -1,7 +1,11 @@
 //allows the use of ControlP5
 import controlP5.*;
+//allows the use of gifs
+import gifAnimation.*;
 
 ControlP5 cp5;
+
+Gif loopingGif;
 
 float border = 40 ;
 
@@ -12,10 +16,16 @@ void setup()
     size(1000,700);
     cp5 = new ControlP5(this);
     background(0);
+    //controls the fps
+    frameRate(100);
+    loopingGif  = new Gif(this, "Snoop dog.gif");
+
     
     centX = width*0.5f;
     
     centY = height*0.5f;
+    
+    
     
     //call function load data
     loadData();
@@ -96,6 +106,7 @@ float centX, centY;
 void PieChart()
 {
   background(0);
+  textSize(16);
   float max = Float.MIN_VALUE;
   
   for (Graph1 temp1:graph1)
@@ -159,13 +170,27 @@ void draw()
     }
     default:
     {
+      background(0);
+      stroke(250);
+      line(0, 350, 1000, 350);
+      line(500, 0, 500, 700);
+      
+      //display text for menu
+      textSize(32);
+      text("Press 1 for BarGraph", 100, 200);
+      text("Press 2 for PieChart", 600, 200);
+      text("Press any other number\n to return to this Menu", 50, 500);
+      
+      //plays gif in loop
+      image (loopingGif, 500, 400);
+      loopingGif.play();
       
       break;
     }
   }//end switch
   
   
-}
+}//end draw
 
 void keyPressed()
 {
